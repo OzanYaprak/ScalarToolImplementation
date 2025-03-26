@@ -1,4 +1,13 @@
 ﻿
+**.NET 9 ile birlikte, varsayılan web API şablonlarında Swagger kullanımı kaldırılmıştır. 
+Bunun yerine, Microsoft, OpenAPI belgeleri oluşturmak için yerleşik bir çözüm sunmuştur. 
+Bu değişikliğin temel nedeni, Swagger'ın .NET 8'den sonra aktif olarak güncellenmemesi ve bakım eksikliğidir.
+Yerleşik OpenAPI desteği, uygulamanızdaki uç noktalar hakkında bilgi oluşturur, ancak interaktif bir kullanıcı arayüzü sağlamaz. 
+Eğer Swagger'ın sunduğu gibi bir arayüze ihtiyaç duyuyorsanız, Scalar gibi üçüncü taraf araçları entegre edebilirsiniz.
+
+
+-- KURULUM -- 
+
 1- MANAGE NUGET PACKAGES SEKMESİNE GİDİLİR, BROWSE KISMINA GELİNİR VE SCALAR YAZIP "Scalar.AspNetCore" OLAN VERSİYON PROJEYE DAHİL EDİLİR.
 2- PROGRAM CLASS A GİDİLİR VE -> app.MapOpenApi(); ALT KISMINA -> app.MapScalarApiReference(); KOD SATIRI YAZILIR.
 3- PROPERTIES KLASÖRÜ ALTINDAN launchSettings.json İÇERİSİNDEN LOCALHOST ADRESİ KOPYALANIR.
