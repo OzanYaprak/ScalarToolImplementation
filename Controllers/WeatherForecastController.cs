@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ScalarToolImplementation.Controllers
@@ -28,6 +29,12 @@ namespace ScalarToolImplementation.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        
+        [HttpGet("TestMethod/{id}")]
+        public IActionResult TestMethod(int id)
+        {
+            return Ok("Baþarýlý");
         }
     }
 }

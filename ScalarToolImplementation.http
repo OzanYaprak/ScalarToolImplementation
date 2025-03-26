@@ -1,6 +1,11 @@
-@ScalarToolImplementation_HostAddress = http://localhost:5165
+@ScalarToolImplementation_HostAddress = https://localhost:7130
 
 GET {{ScalarToolImplementation_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+@id=1
+GET {{ScalarToolImplementation_HostAddress}}/weatherforecast/TestMethod/{{id}}
 
 ###
